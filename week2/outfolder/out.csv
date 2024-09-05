@@ -1,0 +1,58 @@
+#TYPE System.IO.FileInfo
+"PSPath","PSParentPath","PSChildName","PSDrive","PSProvider","PSIsContainer","Mode","VersionInfo","BaseName","Target","LinkType","Name","Length","DirectoryName","Directory","IsReadOnly","Exists","FullName","Extension","CreationTime","CreationTimeUtc","LastAccessTime","LastAccessTimeUtc","LastWriteTime","LastWriteTimeUtc","Attributes"
+"Microsoft.PowerShell.Core\FileSystem::C:\Users\champuser\SYS320\week2\empty1.ps1","Microsoft.PowerShell.Core\FileSystem::C:\Users\champuser\SYS320\week2","empty1.ps1","C","Microsoft.PowerShell.Core\FileSystem","False","-a----","File:             C:\Users\champuser\SYS320\week2\empty1.ps1
+InternalName:     
+OriginalFilename: 
+FileVersion:      
+FileDescription:  
+Product:          
+ProductVersion:   
+Debug:            False
+Patched:          False
+PreRelease:       False
+PrivateBuild:     False
+SpecialBuild:     False
+Language:         
+","empty1","System.Collections.Generic.List`1[System.String]",,"empty1.ps1","0","C:\Users\champuser\SYS320\week2","C:\Users\champuser\SYS320\week2","False","True","C:\Users\champuser\SYS320\week2\empty1.ps1",".ps1","9/5/2024 2:29:22 PM","9/5/2024 6:29:22 PM","9/5/2024 2:29:22 PM","9/5/2024 6:29:22 PM","9/5/2024 2:29:22 PM","9/5/2024 6:29:22 PM","Archive"
+"Microsoft.PowerShell.Core\FileSystem::C:\Users\champuser\SYS320\week2\empty2.ps1","Microsoft.PowerShell.Core\FileSystem::C:\Users\champuser\SYS320\week2","empty2.ps1","C","Microsoft.PowerShell.Core\FileSystem","False","-a----","File:             C:\Users\champuser\SYS320\week2\empty2.ps1
+InternalName:     
+OriginalFilename: 
+FileVersion:      
+FileDescription:  
+Product:          
+ProductVersion:   
+Debug:            False
+Patched:          False
+PreRelease:       False
+PrivateBuild:     False
+SpecialBuild:     False
+Language:         
+","empty2","System.Collections.Generic.List`1[System.String]",,"empty2.ps1","0","C:\Users\champuser\SYS320\week2","C:\Users\champuser\SYS320\week2","False","True","C:\Users\champuser\SYS320\week2\empty2.ps1",".ps1","9/5/2024 2:29:29 PM","9/5/2024 6:29:29 PM","9/5/2024 2:29:29 PM","9/5/2024 6:29:29 PM","9/5/2024 2:29:29 PM","9/5/2024 6:29:29 PM","Archive"
+"Microsoft.PowerShell.Core\FileSystem::C:\Users\champuser\SYS320\week2\empty4.ps1","Microsoft.PowerShell.Core\FileSystem::C:\Users\champuser\SYS320\week2","empty4.ps1","C","Microsoft.PowerShell.Core\FileSystem","False","-a----","File:             C:\Users\champuser\SYS320\week2\empty4.ps1
+InternalName:     
+OriginalFilename: 
+FileVersion:      
+FileDescription:  
+Product:          
+ProductVersion:   
+Debug:            False
+Patched:          False
+PreRelease:       False
+PrivateBuild:     False
+SpecialBuild:     False
+Language:         
+","empty4","System.Collections.Generic.List`1[System.String]",,"empty4.ps1","0","C:\Users\champuser\SYS320\week2","C:\Users\champuser\SYS320\week2","False","True","C:\Users\champuser\SYS320\week2\empty4.ps1",".ps1","9/5/2024 2:29:34 PM","9/5/2024 6:29:34 PM","9/5/2024 2:29:34 PM","9/5/2024 6:29:34 PM","9/5/2024 2:29:34 PM","9/5/2024 6:29:34 PM","Archive"
+"Microsoft.PowerShell.Core\FileSystem::C:\Users\champuser\SYS320\week2\PowerShellBasicLab.ps1","Microsoft.PowerShell.Core\FileSystem::C:\Users\champuser\SYS320\week2","PowerShellBasicLab.ps1","C","Microsoft.PowerShell.Core\FileSystem","False","-a----","File:             C:\Users\champuser\SYS320\week2\PowerShellBasicLab.ps1
+InternalName:     
+OriginalFilename: 
+FileVersion:      
+FileDescription:  
+Product:          
+ProductVersion:   
+Debug:            False
+Patched:          False
+PreRelease:       False
+PrivateBuild:     False
+SpecialBuild:     False
+Language:         
+","PowerShellBasicLab","System.Collections.Generic.List`1[System.String]",,"PowerShellBasicLab.ps1","1625","C:\Users\champuser\SYS320\week2","C:\Users\champuser\SYS320\week2","False","True","C:\Users\champuser\SYS320\week2\PowerShellBasicLab.ps1",".ps1","9/5/2024 2:07:40 PM","9/5/2024 6:07:40 PM","9/5/2024 2:13:46 PM","9/5/2024 6:13:46 PM","9/5/2024 2:13:46 PM","9/5/2024 6:13:46 PM","Archive"

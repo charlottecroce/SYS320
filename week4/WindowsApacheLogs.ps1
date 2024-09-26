@@ -15,10 +15,21 @@
 # select last 5 from array
 #$A[-5..-1]
 
-# display ip addresses for 404 errors
-$notfounds = Get-Content C:\xampp\apache\logs\access.log | Select-String ' 404 '
-$notfounds
-$regex = [regex] "\d{1-3}.\d{1-3}.\d{1-3}.\d{1-3}"
-$ipsunorganized = [regex]::Matches($notfounds, $regex)
-$ipsunorganized
 
+# display ip addresses for 404 errors
+$notfounds = Get-Content C:\xampp\apache\logs\access.log  | Select-String ' 404 '
+
+$regex = [regex] "[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}"
+$ipsunorganized = $regex.Matches($notfounds)
+
+$ips = @()
+for($i=0; $i -lt $ipsunorganized.Count; $i++){
+    $ips += [pscustomobject]@{ "IP" = $ipsunorganized[$i].Value; }
+}
+#$ips | Where-Object { $_.IP -ilike "10.*" }
+
+# count ips from previous output
+$ipsoftens = $ips | Where-Object { $_.IP -ilike "10.*" }
+Write-Host $ipsoftens
+#$counts = $ipsoftens | Group-Object
+#$counts | Select-Object Count, Name

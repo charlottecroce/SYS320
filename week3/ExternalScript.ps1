@@ -1,4 +1,9 @@
 ﻿(Join-Path $PSScriptRoot .\FunctionsAndEventLogs.ps1)
 
-$loginoutsTable = FunctionsAndEventLogs.getWinLogons(14)
+# get login and logoffs from past 14 days
+$loginoutsTable = getWinLogons(14)
 $loginoutsTable
+
+# get shutdowns from past 20 days
+$shutdownsTable = getShutdowns(20)
+$shutdownsTable

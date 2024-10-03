@@ -33,13 +33,13 @@ function getWinLogons ($days){
     return $loginoutsTable
 }
 
-getWinLogons(30)
+#getWinLogons(30)
 
 
 # 5. Get shutdown and start events
-function getShutdowns {
+function getShutdowns ($days){
 
-    $shutdowns = Get-EventLog System | where { $_.EventID -match "600[56]" }
+    $shutdowns = Get-EventLog System -After (Get-Date).AddDays(-$days) | where { $_.EventID -match "600[56]" }
 
     $shutdownsTable = @()
     for($i=0; $i -lt $shutdowns.Count; $i++){
@@ -60,4 +60,5 @@ function getShutdowns {
     return $shutdownsTable
 }
 
-getShutdowns
+#getShutdowns
+

@@ -23,4 +23,4 @@ $tablerecords = @()
     return $tablerecords | Where-Object { $_.IP -ilike "10.*"}
 }
 $tablerecords = ApacheLogs1
-$tablerecords
+#$tablerecords

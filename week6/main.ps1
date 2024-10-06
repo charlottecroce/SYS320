@@ -173,22 +173,29 @@ while($operation){
         else { Write-Host "user does not exist" | Out-String }
     }
 
+    # get at risk users, >10 failed logins in time frame
     elseif($choice -eq 9){
        
         $timeSince = Read-Host -Prompt "enter number of days to search back"
       
+        $atRiskUsers = getAtRiskUsers $timeSince
+        # DONE: Change the above line in a way that, the days 90 should be taken from the user
 
-        Write-Host "in past $timeSince days, these users have had >10 failed login attempts: "
-        
-       
+        Write-Host ($atRiskUsers | Format-Table | Out-String)
+    
     }
 
-    # TODO: Create another choice "List at Risk Users" that
+
+    else{
+        Write-Host "invalid input: 0-9 allowed`n"
+    }
+
+    # DONE: Create another choice "List at Risk Users" that
     #              - Lists all the users with more than 10 failed logins in the last <User Given> days.  
     #                (You might need to create some failed logins to test)
     #              - Do not forget to update prompt and option numbers
     
-    # TODO: If user enters anything other than listed choices, e.g. a number that is not in the menu   
+    # DONE: If user enters anything other than listed choices, e.g. a number that is not in the menu   
     #       or a character that should not be accepted. Give a proper message to the user and prompt again.
     
 

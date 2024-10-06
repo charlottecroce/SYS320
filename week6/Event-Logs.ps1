@@ -64,3 +64,24 @@ function getFailedLogins($timeBack){
 
     return $failedloginsTable
 } # End of function getFailedLogins
+
+    # get at risk users, >10 failed logins in time frame
+function getAtRiskUsers($timeBack){
+        $users = getEnabledUsers
+        $failedLogins = getFailedLogins $timeBack
+
+        $atRiskUsers = @()
+
+        for($i=0; $i -lt $users.Count; $i++){
+            $name = $users[$i].Name  
+            $failCount = ($failedLogins | Where-Object { $_.User -ilike "*$name"} ).Count
+            if($failCount -ge 10){
+                $atRiskUsers += [pscustomobject]@{"User" = $name; `
+                                                  "Failed Logins" = $failCount; }                  
+            }
+
+        }
+
+        return $atRiskUsers
+
+}

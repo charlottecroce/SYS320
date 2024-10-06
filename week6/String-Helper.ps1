@@ -27,3 +27,25 @@ for($j=0; $j -lt $splitted.Count; $j++){
 
 return $allines
 }
+
+
+function checkpassword($passwd){
+    Write-Host $passwd
+    if($passwd.Length -lt 6){
+        Write-Host "failed length test" | Out-String
+        return $false
+    }
+    elseif($passwd -notmatch "[0-9]"){
+        Write-Host "Digit Test" | Out-String
+        return $false
+    }
+    elseif($passwd -notmatch "[!$%^@#&().-]"){
+        Write-Host "special character test" | Out-String
+        return $false
+    }else{
+        Write-Host "here"
+        return $true
+    }
+}
+
+#checkpassword("abcd123!")

@@ -10,7 +10,13 @@ function getEnabledUsers(){
 
 }
 
+function checkuser($name){
+    $users = Get-LocalUser | Where-Object { $_.name -ilike $name }
+    if($users.Count -lt 1){ return $false}
+    else { return $true }
+}
 
+#checkuser("champuser2")
 
 <# ******************************
 # Create a function that returns a list of NAMEs AND SIDs only for not enabled users

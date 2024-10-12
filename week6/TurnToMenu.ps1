@@ -60,4 +60,8 @@ while($operation){
         }
     }
 
+    else{
+        Write-Host "invalid input. 1-5 allowed`n"
+    }
+
 }

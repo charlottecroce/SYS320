@@ -18,6 +18,7 @@ Get-WmiObject -List | Where-Object { $_.Name -ilike "Win32_Net*" } | Sort-Object
 
 # 5. Get DHCP server IP
 Get-CimInstance Win32_NetworkAdapterConfiguration -Filter "DHCPEnabled=$true" | Select DHCPServer
+
 # 6. ...and hide table headers
 Get-CimInstance Win32_NetworkAdapterConfiguration -Filter "DHCPEnabled=$true" | `
 Select DHCPServer | Format-Table -HideTableHeaders
@@ -46,7 +47,7 @@ else{
 }
 
 # 10. List all files in working directory that have extension .ps1
-#    and save results to out.csv file in outfolder directory
+#     and save results to out.csv file in outfolder directory
 $files=(Get-ChildItem)
 $folderpath="$PWD\outfolder"
 $filepath = Join-Path $folderpath "out.csv"
@@ -55,7 +56,7 @@ Export-Csv -Path $filepath
 
 # 11. Without changing directory, find every .csv file and change their extensions to .log, 
 #     then recursively display all the files
-$files=Get-ChildItem -File -Recurse
+$files = Get-ChildItem -File -Recurse
 $files | Rename-Item -NewName { $_.Name -replace '.csv', '.log' }
 Get-ChildItem -Recurse
 

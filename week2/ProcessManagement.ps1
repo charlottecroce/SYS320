@@ -10,7 +10,7 @@ Get-Process | Where-Object { $_.Name -inotlike "*system32*"}
 Get-Service | Where-Object { $_.Status -eq "Stopped" } | `
 Sort-Object | Export-Csv -Path StoppedServices.csv
 
-# 4. If google chrome browser is not running, start it and direct to champlain.edu
+# 4. If Google Chrome browser is not running, start it and direct to champlain.edu
 #    If it is already running, stop it
 if (Get-Process -Name chrome -ErrorAction SilentlyContinue){
     Write-Host "Chrome Running. Stopping now"

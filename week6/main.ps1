@@ -187,7 +187,7 @@ while($operation){
 
 
     else{
-        Write-Host "invalid input: 0-9 allowed`n"
+        Write-Host "invalid input: 0-9 allowed`n" | Out-String
     }
 
     # DONE: Create another choice "List at Risk Users" that

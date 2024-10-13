@@ -1,6 +1,6 @@
 ﻿# 9/26/24
+
 # parses apache log into pscustomobjects, filters IPs for 10.*
-#
 function ApacheLogs1(){
 $logsnotformatted = Get-Content C:\xampp\apache\logs\access.log
 $tablerecords = @()

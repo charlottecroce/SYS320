@@ -1,8 +1,7 @@
 ﻿# 9/26/24
 
 # input page name, http code, and browser
-# out IP addresses that visited the given page, with given browser, and got given HTTP response
-
+# output IP addresses that visited the given page, with given browser, and got given HTTP response
 Function Apache-Logs ([string]$page, [string]$HTTPcode, [string]$browser){
     $logsnotformatted = Get-Content C:\xampp\apache\logs\access.log
     $tablerecords = @()
@@ -31,5 +30,5 @@ Function Apache-Logs ([string]$page, [string]$HTTPcode, [string]$browser){
 #$ips1 = Apache-Logs "/index.html" "200" "Mozilla/5.0"
 #$ips1
 
-$ips2 = Apache-Logs "/*external*" "404" "Mozilla/5.0"
-$ips2
+#$ips2 = Apache-Logs "/*external*" "404" "Mozilla/5.0"
+#$ips2

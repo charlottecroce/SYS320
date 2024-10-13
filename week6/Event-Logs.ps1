@@ -1,8 +1,10 @@
 ﻿. (Join-Path $PSScriptRoot String-Helper.ps1)
-
+. (Join-Path $PSScriptRoot Users.ps1)
 
 <# ******************************
-     Function Explaination
+     Function: get event logs from login and logouts
+     Input: time back to search
+     Output: Array of login/out objects
 ****************************** #>
 function getLogInAndOffs($timeBack){
 
@@ -34,7 +36,9 @@ return $loginoutsTable
 
 
 <# ******************************
-     Function Explaination
+     Function: get windows event logs for failed logins
+     Input: time to search back
+     Output: array of failed login objects
 ****************************** #>
 function getFailedLogins($timeBack){
   
@@ -65,7 +69,13 @@ function getFailedLogins($timeBack){
     return $failedloginsTable
 } # End of function getFailedLogins
 
-    # get at risk users, >10 failed logins in time frame
+
+
+<# ******************************************************
+   Functions: get at risk users, >10 failed logins in time frame
+   Input: time to search back
+   Output: array of users & numfailedlogin objects
+********************************************************* #>
 function getAtRiskUsers($timeBack){
         $users = getEnabledUsers
         $failedLogins = getFailedLogins $timeBack

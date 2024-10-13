@@ -1,4 +1,8 @@
-﻿function ChooseTimeToRun($Time){
+﻿<# ******************************************************
+   Functions: Creates a new scheduled task for week7/main.ps1 to run
+   Input:   1) Time for shceduled task to run
+********************************************************* #>
+function ChooseTimeToRun($Time){
 $scheduledTask = Get-ScheduledTask | Where-Object { $_.TaskName -ilike "mytask" }
 
 if($scheduledTask -ne $null){
@@ -21,6 +25,9 @@ Get-ScheduledTask | Where-Object { $_.TaskName -ilike "myTask" }
 
 }
 
+<# ******************************************************
+   Functions: if "myTask is running", unregister it
+********************************************************* #>
 function DisableAutoRun(){
 
 $scheduledTasks = Get-ScheduledTask | Where-Object { $_.TaskName -ilike "myTask" }

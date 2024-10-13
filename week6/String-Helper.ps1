@@ -28,7 +28,11 @@ for($j=0; $j -lt $splitted.Count; $j++){
 return $allines
 }
 
-
+<# ******************************************************
+   Functions: Checks if password is >6char, includes a digit, and includes a special character
+   Input:   1) Password
+   Output:  1) Boolean if password is valid
+********************************************************* #>
 function checkpassword($passwd){
     Write-Host $passwd
     if($passwd.Length -lt 6){

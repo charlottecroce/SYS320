@@ -1,11 +1,13 @@
-﻿
+﻿# sends an email to charlotte.croce@mymail.champlain.edu
+# with one parameter for the email body
 function SendAlertEmail($Body){
 $From = "charlotte.croce@mymail.champlain.edu"
 $To = "charlotte.croce@mymail.champlain.edu"
 $Subject = "Suspicious Activity"
 
 # remove password before publishing to GitHub!
-$Password = "fcdh onxc nwzf pday" | ConvertTo-SecureString -AsPlainText -Force
+# ...and if you accidentally push with the password visible, just delete the appKey
+$Password = "insert-new-appkey-here" | ConvertTo-SecureString -AsPlainText -Force
 $Credential = New-Object -TypeName System.Management.Automation.PSCredential -ArgumentList $From, $Password
 
 Send-MailMessage -From $From -To $To -Subject $Subject -Body $Body -SmtpServer "smtp.gmail.com" `
